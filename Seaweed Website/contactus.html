@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>ContactUs</title>
+		<link rel="stylesheet" href="style3.css"/>		
+		
+		
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="images/logoseaweed.png" type="image/x-icon">
+
+
+
+	</head>
+	
+	<body>
+		<section class="sub-header2">
+		
+			<nav>
+				<a href="index.html"><img src="images/logoseaweed.png" alt=""></a>
+				<h3 style="color: white;">SEAGRASS</h3>
+				
+					<div class="nav-links" id="navLinks">
+					<i class="fa fa-times" onclick="hideMenu()"></i>
+						<ul>
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="seaweed.html">SEAGRASS</a></li>
+							<li><a href="aboutus.html">ABOUT US</a></li>
+							<li><a href="contactus.html">CONTACT US</a></li>
+							<li><a href="developer.html">DEVELOPERS</a></li>
+							<!-- <li><a href="signup.html">SIGN UP</a></li>
+							<li><a href="login.html">LOGIN</a></li> -->
+							
+						</ul>
+					</div>
+					
+					<i class="fa fa-bars" onclick="showMenu()"></i>
+					
+			</nav>
+			
+			<h1>Contact Us</h1>
+							
+		</section>
+		
+		<section class="location">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.7250754062884!2d124.28506127390631!3d8.428636791610653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x325568d51ce7cfc1%3A0x7759b77444214c4d!2sMindanao%20State%20University%20at%20Naawan!5e0!3m2!1sen!2sph!4v1695447955158!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+		
+		<section class="contact-us">
+			<div class="row">
+			
+				<div class="contact-col">
+					<div>
+						<i class="fa fa-home"></i>
+							<span>
+								<h5>F8W2+6W2, Naawan</h5>
+								<p>9022 Naawan Misamis Oriental</p>
+							</span>
+					</div>
+					
+					<div>
+						<i class="fa fa-phone"></i>
+							<span>
+								<h5>(088) 555 0160</h5>
+								<p>Monday to Saturday, 8:30AM to 4PM</p>
+							</span>
+					</div>
+					
+					<div>
+						<i class="fa fa-envelope-o"></i>
+							<span>
+								<h5>msunaawan@gmail.com</h5>
+								<p>Email us your query</p>
+							</span>
+					</div>
+				
+				</div>
+				
+				<div class="contact-col">
+				
+					<form action="">
+						<input type="text" placeholder="Enter your name" required>
+						<input type="email" placeholder="Enter email address" required>
+						<input type="text" placeholder="Enter your subject" required>
+						<textarea rows="8" placeholder="Message" required></textarea>
+						<button type="submit" class="hero-btn red-btn">Send Message</button>  
+					</form>
+					
+				</div>
+				
+			</div>
+		</section>
+		
+			<section class="footer">
+				<h4>About Us</h4>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, fugiat.<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci nemo necessitatibus asperiores? Atque laudantium esse qui quos minus alias iure!.</p>
+				
+				<div class="icons">
+					<i class="fa fa-facebook"></i>
+					<i class="fa fa-twitter"></i>
+					<i class="fa fa-instagram"></i>
+					<i class="fa fa-linkedin"></i>
+				</div>
+				
+			</section>
+			
+		<script>
+			var navLinks= document.getElementById("navLinks");
+			
+			function showMenu()
+			{
+				navLinks.style.right= "0";
+			}
+			function hideMenu()
+			{
+				navLinks.style.right= "-200px";
+			}
+		</script>
+		
+	</body>
+	
+</html>
