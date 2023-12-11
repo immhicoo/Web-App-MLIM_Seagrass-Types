@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/logoseaweed.png" type="image/x-icon">
-
+    <link href="https://cdn.jsdelivr.net/npm/ @5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 <section class="sub-header">
     <nav>
         <a href="index.html"><img src="images/logoseaweed.png" alt=""></a>
-        <h3>SEAGRASS</h3>
+        <h5>SEAGRASS</h5>
         <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
@@ -33,100 +34,226 @@
     </nav>
     <h1>Different Types of Seagrass Species</h1>
 </section>
+<!-- Js AREA -->
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var photoInput = document.getElementById('photo-input');
+    
+    photoInput.addEventListener('change', function(e) {
+        var file = e.target.files[0];
+        var reader = new FileReader();
 
-<section class="seaweed-table">
-    <table>
-        <thead>
-            <tr>
-                <th>Seagrass</th>
-                <th>Seagrass Code</th>
-                <th>Description</th>
-                <th>Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Cymodocea Serrulata</td>
-                <td>Cs</td>
-                <td>The leaf of this plant features a serrated tip, a wide blade measuring 5-9mm in width, and typically ranges from 6 to 15cm in length, with 13-17 prominent longitudinal veins.  </td>
-                <td><img src="images/greenalgae.jpg" alt="Green Algae" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Halodule Univervis</td>
-                <td>Hu</td>
-                <td>Halodule Uninervis has trident leaf tip, 1 central vein and usually pale rhizome with clean black leaf scars.</td>
-                <td><img src="images/brownalgae.jpg" alt="Brown Algae" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Enhalus Acoroides</td>
-                <td>Ea</td>
-                <td>This plant is characterized by very long ribbon-like leaves with inrolled margins, a thick rhizome covered in long black bristles, and cord-like roots, with the leaves typically measuring 30-150 cm in length.</td>
-                <td><img src="images/e.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Thalassia Hemprichii</td>
-                <td>Th</td>
-                <td>Thalassia hemprichii has short black bars of tannin cells on leaf, thick rhizome with scars between shoots, "Sickle" shaped leaves that are 10-40 cm long.</td>
-                <td><img src="images/a.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Cymodocea Rotundata</td>
-                <td>Cr</td>
-                <td>Rounded leaf tip, narrow lead blade (2-4mm wide), Leaves 7-15 cm long, 9-15 longitudinal veins, well developed leaf sheath</td>
-                <td><img src="images/b.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Halodule Pinifolia</td>
-                <td>Hp</td>
-                <td>Rounded leaf tip, 1 central vein, usually pale rhizome, with clean black leaf scars</td>
-                <td><img src="images/c.jpeg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Halophila Decipiens</td>
-                <td>Hd</td>
-                <td>Small oval leaf blade 1-2.5cm long, 6.8 cross veins, leaf hairs on both sides</td>
-                <td><img src="images/f.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Halophila Ovalis</td>
-                <td>Ho</td>
-                <td>This plant has 12 or more cross veins and no hairs on leaf surface.</td>
-                <td><img src="images/g.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Halophila Minor</td>
-                <td>Hm</td>
-                <td>This plant has less than 12 pair of cross veins and small oval leaf blade.</td>
-                <td><img src="images/h.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Thalassodendron Ciliatum</td>
-                <td>Tc</td>
-                <td>This plant has a cluster of leaves on elongate shoot "sickle" shaped leaves with tip, ligule present, rhizome "woody".</td>
-                <td><img src="images/j.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <tr>
-                <td>Syringodium Isoetifolium</td>
-                <td>Si</td>
-                <td>This plant is cylindrical in cross section with leaf tip tapers to a point and leaves 7-30cm long.</td>
-                <td><img src="images/k.jpg" alt="" style="max-width: 100px;"></td>
-            </tr>
-            <!-- Add more rows for other seaweed types as needed -->
-        </tbody>
-    </table>
+        reader.onload = function(e) {
+            var previewImage = document.getElementById('preview-image');
+            previewImage.setAttribute('src', e.target.result);
+        };
+
+        reader.readAsDataURL(file);
+    });
+});
+</script>
+
+<section class="container-fluid">
+    <div class="row d-flex justify-content-center pt-3 me-6">
+        <div class="col-md-2">
+            <div class="card shadow-lg">
+                <div class="card-header text-center" style="font-size: italic;">
+                    <h6 class="fw-bold">
+                        Add Image
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <form class="form-group" action="" method="post" enctype="multipart/form-data"
+                        class="is-valid">
+                        <div class="form-row pb-3">
+                            <div class="container mx-auto col-md-6">
+                                <div class="mb-2 text-center pt-3">
+                                    <img id="preview-image" alt="" class="img-fluid" height="200" width="200"
+                                        value="">
+                                </div><br>
+                            </div>
+                        </div>
+                        <div class="py-3">
+                            <input required id="photo-input" type="file" name="image"
+                                class="form-control form-control-file">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </div>
 </section>
-
-<section class="footer">
-    <h4>About Us</h4>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, distinctio.<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio corrupti vero repellat?</p>
-    <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkedin"></i>
+<section class="container">
+    <div class="row py-3">
+        <div class="col-md-12">
+           <div class="row d-flex justify-content-around">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5 class="fw-bold">Enhalus Acoroides (Ea)</h5>
+                    </div>
+                    <div class="px-3 py-3">
+                        <img src="images/e.jpg" class="card-img-top" height="200" width="200">
+                    </div>
+                    <div class="card-body">
+                        <P class="card-text pb-5">
+                            This plant is characterized by very long ribbon-like leaves with inrolled margins, a thick rhizome covered in long black bristles, and cord-like roots, with the leaves typically measuring 30-150 cm in length.                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5 class="fw-bold">Cymodocea Serrulata (Cs)</h5>
+                    </div>
+                    <div class="px-3 py-3">
+                        <img src="images/greenAlgae.jpg" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <P class="card-text">
+                            The leaf of this plant features a serrated tip, a wide blade measuring 5-9mm in width, and typically ranges from 6 to 15cm in length, with 13-17 prominent longitudinal veins.
+                        </P>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5 class="fw-bold">Halodule Univervis (Hu)</h5>
+                    </div>
+                    <div class="px-3 py-3">
+                        <img src="images/brownalgae.jpg" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <P class="card-text p-4">
+                            The leaf of this plant features a serrated tip, a wide blade measuring 5-9mm in width, and typically ranges from 6 to 15cm in length, with 13-17 prominent longitudinal veins.                        </P>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h5 class="fw-bold">Thalassia Hemprichii (Th)</h5>
+                    </div>
+                    <div class="px-3 py-3">
+                        <img src="images/a.jpg" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <P class="card-text pb-5">
+                            Thalassia hemprichii has short black bars of tannin cells on leaf, thick rhizome with scars between shoots, "Sickle" shaped leaves that are 10-40 cm long.                </div>
+            </div>
+            
+            </div>
+           </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-around">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Cymodocea Rotundata (Cr)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/b.jpg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text">
+                        Rounded leaf tip, narrow lead blade (2-4mm wide), Leaves 7-15 cm long, 9-15 longitudinal veins, well developed leaf sheath.           
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Halodule Pinifolia (Hp)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/c.jpeg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text pb-5">
+                        Rounded leaf tip, 1 central vein, usually pale rhizome, with clean black leaf scars.       
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Halophila Decipiens (Hd)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/f.jpg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text pb-5">
+                        Small oval leaf blade 1-2.5cm long, 6.8 cross veins, leaf hairs on both sides.
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Halophila Ovalis (Ho)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/g.jpg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text pb-5">
+                        This plant has 12 or more cross veins and no hairs on leaf surface. Has oval, spoon-shaped leaves.
+                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3 d-flex justify-content-center">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Halophila Minor (Hm)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/h.jpg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text pb-5">
+                        This plant has less than 12 pair of cross veins and small oval leaf blade.
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Thalassodendron Ciliatum (Tc)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/j.jpg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text">
+                        This plant has a cluster of leaves on elongate shoot "sickle" shaped leaves with tip, ligule present, rhizome "woody".
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="fw-bold">Syringodium Isoetifolium (Si)</h5>
+                </div>
+                <div class="px-3 py-3">
+                    <img src="images/k.jpg" class="card-img-top" height="200" width="200">
+                </div>
+                <div class="card-body">
+                    <P class="card-text pb-4">
+                        This plant is cylindrical in cross section with leaf tip tapers to a point and leaves 7-30cm long.
+                 </div>
+            </div>
+        </div>
     </div>
 </section>
 
+
+<section class="footer">
+    <p>&copy; BSIT-A Batch 23-24. All Rights Reserved.</p></section>
 <script>
     var navLinks = document.getElementById("navLinks");
 
